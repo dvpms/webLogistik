@@ -4,19 +4,19 @@
     <!-- dark logo-->
     <a href="index.html" class="logo logo-dark">
       <span class="logo-sm">
-        <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo) ?>" alt="" width="40" height="">
+        <img src="public/assets/clouds/drives/brand/ . <?php echo $this->brand->logo ?>" alt="" width="40" height="">
       </span>
       <span class="logo-lg">
-        <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="60" height="">
+        <img src="public/assets/clouds/drives/brand/ . <?php echo $this->brand->logo_light ?>" alt="" width="60" height="">
       </span>
     </a>
     <!-- light logo-->
     <a href="index.html" class="logo logo-light">
       <span class="logo-sm">
-        <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo) ?>" alt="" width="40" height="">
+        <img src="public/assets/clouds/drives/brand/ . <?php echo $this->brand->logo ?>" alt="" width="40" height="">
       </span>
       <span class="logo-lg">
-        <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="60" height="">
+        <img src="public/assets/clouds/drives/brand/ .  <?php echo $this->brand->logo_light ?>" alt="" width="60" height="">
       </span>
     </a>
     <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover"><i class="ri-record-circle-line"></i></button>

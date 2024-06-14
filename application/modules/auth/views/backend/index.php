@@ -18,18 +18,18 @@
   <title><?php echo $page_title . ' | ' . $this->brand->name ?></title>
 
   <!-- favicon -->
-  <link rel="icon" type="image/png" href="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->favicon) ?>" sizes="32x32">
-  <link rel="icon" type="image/png" href="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->favicon) ?>" sizes="16x16">
+  <link rel="icon" type="image/png" href="public/assets/clouds/drives/brand . <?php echo $this->brand->favicon ?>" sizes="32x32">
+  <link rel="icon" type="image/png" href="public/assets/clouds/drives/brand . <?php echo $this->brand->favicon ?>" sizes="16x16">
 
   <link href="public/assets/backend/themes/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="public/assets/backend/themes/css/icons.min.css" rel="stylesheet" type="text/css" />
   <link href="public/assets/backend/themes/css/app.min.css" rel="stylesheet" type="text/css" />
   <link href="public/assets/backend/themes/css/auth.css" rel="stylesheet" type="text/css" />
 
-  <script src="<?php echo base_url('assets/clouds/jquery/jquery-3.6.0.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/backend/themes/js') ?>/bootstrap.bundle.min.js"></script>
-  <script src="<?php echo base_url('assets/clouds/plugins/toastr/toastr.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/backend/themes/js/layout.js') ?>"></script>
+  <script src="oublic/assets/clouds/jquery/jquery-3.6.0.min.js"></script>
+  <script src="public/assets/backend/themes/js/bootstrap.bundle.min.js"></script>
+  <script src="public/assets/clouds/plugins/toastr/toastr.min.js"></script>
+  <script src="public/assets/backend/themes/js/layout.js"></script>
 
   <script>
     $(document).ready(function() {
@@ -67,7 +67,7 @@
                 <div class="col-lg-12">
                   <div class="box-brand p-lg-0 p-3">
                     <?php if ($this->brand->logo) : ?>
-                      <img src="<?php echo base_url('assets/clouds/drives/brand/'.$this->brand->logo) ?>" alt="">
+                      <img src="public/assets/clouds/drives/brand <?php echo $this->brand->logo ?>" alt="">
                     <?php endif; ?>
                     <div class="brand-text">
                       <h1><?php echo $this->brand->name ?></h1>

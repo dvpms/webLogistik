@@ -5,18 +5,18 @@
         <div class="navbar-brand-box horizontal-logo">
           <a href="<?php echo site_url('admin') ?>" class="logo logo-dark">
             <span class="logo-sm">
-              <img src="public/assets/clouds/drives/brand/ . <?php echo $this->brand->logo_light ?>" alt="" width="90" height="">
+              <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
             </span>
             <span class="logo-lg">
-              <img src="public/assets/clouds/drives/brand/ . <?php echo $this->brand->logo_light ?>" alt="" width="90" height="">
+              <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
             </span>
           </a>
           <a href="<?php echo site_url('admin') ?>" class="logo logo-light">
             <span class="logo-sm">
-              <img src="public/assets/clouds/drives/brand/ . <?php echo $this->brand->logo_light ?>" alt="" width="90" height="">
+              <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
             </span>
             <span class="logo-lg">
-              <img src="public/assets/clouds/drives/brand/ . <?php echo $this->brand->logo_light ?>" alt="" width="90" height="">
+              <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
             </span>
           </a>
         </div>
