@@ -1,0 +1,60 @@
+.auth-bg-cover {
+  background-image: url('../images/bg-login.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 678px) {
+  .auth-bg-cover {
+    background-image: url('../images/bg-login-mobile.png');
+  }
+
+  .auth-page-content {
+    margin-top: -10rem;
+  }
+}
+
+.auth-bg-cover > .bg-overlay { 
+  opacity: 0.3;
+}
+
+.auth-page-content {
+  margin-top: -15rem;
+}
+
+.form-control-auth {
+  background-color: #F1F2F2;
+  border: 0px solid var(--vz-input-border);
+}
+
+.form-control-auth:focus {
+  border: 0.3px solid var(--vz-input-border);
+}
+
+.box-brand {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.box-brand > img {
+  width: 90px;
+}
+
+.box-brand > .brand-text > h1 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #0C2F91;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.box-brand > .brand-text > h1 > span {
+  color: #5DC106;
+}
+
+.error p {
+  margin-bottom: 0;
+}
