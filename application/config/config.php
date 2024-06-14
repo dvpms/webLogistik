@@ -26,7 +26,7 @@ date_default_timezone_set("Asia/Jakarta");
 */
 
 
-$config['base_url'] = 'http://localhost/webLogistik1';
+$config['base_url'] = 'http://localhost/weblogistik/';
 
 /*
 |--------------------------------------------------------------------------

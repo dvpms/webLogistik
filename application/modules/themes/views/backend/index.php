@@ -29,39 +29,39 @@
   <title><?php echo $page_title . ' | ' . $this->brand->name ?></title>
 
   <!-- favicon -->
-  <link rel="icon" type="image/png" href="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->favicon) ?>" sizes="32x32">
-  <link rel="icon" type="image/png" href="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->favicon) ?>" sizes="16x16">
+  <link rel="icon" type="image/png" href="public/assets/clouds/drives/brand/ . <?php echo $this->brand->favicon ?>" sizes="32x32">
+  <link rel="icon" type="image/png" href="public/assets/clouds/drives/brand/ . <?php echo $this->brand->favicon ?>" sizes="16x16">
 
 
-  <link href="<?php echo base_url('assets/backend/themes/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css">
-  <link href="<?php echo base_url('assets/backend/themes/css/icons.min.css') ?>" rel="stylesheet" type="text/css">
-  <link href="<?php echo base_url('assets/backend/themes/css/app.min.css') ?>" rel="stylesheet" type="text/css">
-  <link href="<?php echo base_url('assets/backend/themes/css/custom.min.css') ?>" rel="stylesheet" type="text/css">
-  <link href="<?php echo base_url('assets/clouds/bs5/icons/font/bootstrap-icons.css') ?>" rel="stylesheet">
-  <link href="<?php echo base_url('assets/clouds/css/fancybox.css') ?>" rel="stylesheet" type="text/css">
-  <link href="<?php echo base_url('assets/clouds/css/syam.min.css') ?>" rel="stylesheet" type="text/css">
-  <link href="<?php echo base_url('assets/clouds/css/eo.min.css') ?>" rel="stylesheet" type="text/css">
-  <link href="<?php echo base_url('assets/clouds/plugins/toastr/toastr.css') ?>" rel="stylesheet" type="text/css">
-  <link href="<?php echo base_url('assets/clouds/plugins/select2/css/select2.css') ?>" rel="stylesheet" type="text/css">
+  <link href="public/assets/backend/themes/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="public/assets/backend/themes/css/icons.min.css" rel="stylesheet" type="text/css">
+  <link href="public/assets/backend/themes/css/app.min.css" rel="stylesheet" type="text/css">
+  <link href="public/assets/backend/themes/css/custom.min.css" rel="stylesheet" type="text/css">
+  <link href="public/assets/clouds/bs5/icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="public/assets/clouds/css/fancybox.css" rel="stylesheet" type="text/css">
+  <link href="public/assets/clouds/css/syam.min.css" rel="stylesheet" type="text/css">
+  <link href="public/assets/clouds/css/eo.min.css" rel="stylesheet" type="text/css">
+  <link href="public/assets/clouds/plugins/toastr/toastr.css" rel="stylesheet" type="text/css">
+  <link href="public/assets/clouds/plugins/select2/css/select2.css" rel="stylesheet" type="text/css">
 
-  <script src="<?php echo base_url('assets/clouds/jquery/jquery-3.6.4.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/backend/themes/js/layout.js') ?>"></script>
-  <script src="<?php echo base_url('assets/backend/themes/js/bootstrap.bundle.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/backend/themes/js/simplebar.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/backend/themes/js/waves.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/backend/themes/js/feather.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/backend/themes/js/lord-icon-2.1.0.js') ?>"></script>
-  <script src="<?php echo base_url('assets/backend/themes/js/pickr.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/backend/themes/js/flatpickr.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/backend/themes/js/choices.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/clouds/js/blockui.js') ?>"></script>
-  <script src="<?php echo base_url('assets/clouds/js/bootbox.js') ?>"></script>
-  <script src="<?php echo base_url('assets/clouds/js/pdfobject.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/clouds/js/sweetalert2.all.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/clouds/js/fancybox.js') ?>"></script>
-  <script src="<?php echo base_url('assets/clouds/js/syam.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/clouds/plugins/toastr/toastr.min.js') ?>"></script>
-  <script src="<?php echo base_url('assets/clouds/plugins/select2/js/select2.js') ?>"></script>
+  <script src="public/assets/clouds/jquery/jquery-3.6.4.min.js"></script>
+  <script src="public/assets/backend/themes/js/bootstrap.bundle.min.js"></script>
+  <script src="public/assets/backend/themes/js/layout.js"></script>
+  <script src="public/assets/backend/themes/js/simplebar.min.js"></script>
+  <script src="public/assets/backend/themes/js/waves.min.js"></script>
+  <script src="public/assets/backend/themes/js/feather.min.js"></script>
+  <script src="public/assets/backend/themes/js/lord-icon-2.1.0.js"></script>
+  <script src="public/assets/backend/themes/js/pickr.min.js"></script>
+  <script src="public/assets/backend/themes/js/flatpickr.min.js"></script>
+  <script src="public/assets/backend/themes/js/choices.min.js"></script>
+  <script src="public/assets/clouds/js/blockui.js"></script>
+  <script src="public/assets/clouds/js/bootbox.js"></script>
+  <script src="public/assets/clouds/js/pdfobject.min.js"></script>
+  <script src="public/assets/clouds/js/sweetalert2.all.min.js"></script>
+  <script src="public/assets/clouds/js/fancybox.js"></script>
+  <script src="public/assets/clouds/js/syam.min.js"></script>
+  <script src="public/assets/clouds/plugins/toastr/toastr.min.js"></script>
+  <script src="public/assets/clouds/plugins/select2/js/select2.js"></script>
   <script>
     var baseUrl = '<?php echo site_url() ?>';
     var csrfName = '<?php echo $this->security->get_csrf_token_name() ?>';
@@ -100,7 +100,7 @@
     <span>Butuh Bantuan ?<span>
   </a> -->
   <!-- end layout wrapper -->
-  <script src="<?php echo base_url('assets/backend/themes/js/app.js') ?>"></script>
+  <script src="public/assets/backend/themes/js/app.js"></script>
 </body>
 
 </html>

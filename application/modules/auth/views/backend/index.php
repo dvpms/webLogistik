@@ -21,10 +21,10 @@
   <link rel="icon" type="image/png" href="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->favicon) ?>" sizes="32x32">
   <link rel="icon" type="image/png" href="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->favicon) ?>" sizes="16x16">
 
-  <link href="<?php echo base_url('assets/backend/themes/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css" />
-  <link href="<?php echo base_url('assets/backend/themes/css/icons.min.css') ?>" rel="stylesheet" type="text/css" />
-  <link href="<?php echo base_url('assets/backend/themes/css/app.min.css') ?>" rel="stylesheet" type="text/css" />
-  <link href="<?php echo base_url('assets/backend/themes/css/auth.css') ?>" rel="stylesheet" type="text/css" />
+  <link href="public/assets/backend/themes/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="public/assets/backend/themes/css/icons.min.css" rel="stylesheet" type="text/css" />
+  <link href="public/assets/backend/themes/css/app.min.css" rel="stylesheet" type="text/css" />
+  <link href="public/assets/backend/themes/css/auth.css" rel="stylesheet" type="text/css" />
 
   <script src="<?php echo base_url('assets/clouds/jquery/jquery-3.6.0.min.js') ?>"></script>
   <script src="<?php echo base_url('assets/backend/themes/js') ?>/bootstrap.bundle.min.js"></script>

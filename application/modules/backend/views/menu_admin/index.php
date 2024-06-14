@@ -97,9 +97,9 @@
 </div>
 <?php $this->load->view('backend/boxicons/index') ?>
 
-<link rel="stylesheet" href="<?php echo base_url('assets/clouds/css/jquery.treetable.css') ?>">
-<link rel="stylesheet" href="<?php echo base_url('assets/clouds/css/jquery.treetable.theme.css') ?>">
-<script src="<?php echo base_url('assets/clouds/js/jquery.treetable.js') ?>"></script>
+<link rel="stylesheet" href="public/assets/clouds/css/jquery.treetable.css">
+<link rel="stylesheet" href="public/assets/clouds/css/jquery.treetable.theme.css">
+<script src="public/assets/clouds/js/jquery.treetable.js"></script>
 
 <script>
 	var tipeData = 'list';
