@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
-class Dashboard extends FMS_Backend
+class Harian extends FMS_Backend
 {
 
 	function __construct()
@@ -10,7 +10,7 @@ class Dashboard extends FMS_Backend
 
 	function index()
 	{
-		$data['page_title'] = 'Dashboard';
-		$this->layout_backend('dashboard', $data);
+		$data['page_title'] = 'Laporan Harian';
+		$this->layout_backend('laporan_harian/index', $data);
 	}
 }

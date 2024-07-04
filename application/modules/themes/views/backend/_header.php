@@ -5,18 +5,18 @@
         <div class="navbar-brand-box horizontal-logo">
           <a href="<?php echo site_url('admin') ?>" class="logo logo-dark">
             <span class="logo-sm">
-              <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
+              <img src="<?php echo base_url('public/assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
             </span>
             <span class="logo-lg">
-              <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
+              <img src="<?php echo base_url('public/assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
             </span>
           </a>
           <a href="<?php echo site_url('admin') ?>" class="logo logo-light">
             <span class="logo-sm">
-              <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
+              <img src="<?php echo base_url('public/assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
             </span>
             <span class="logo-lg">
-              <img src="<?php echo base_url('assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
+              <img src="<?php echo base_url('public/assets/clouds/drives/brand/' . $this->brand->logo_light) ?>" alt="" width="90" height="">
             </span>
           </a>
         </div>
@@ -50,10 +50,10 @@
                 <?php if ($this->session->userdata('is_pegawai') == 1) : ?>
                   <img class="rounded-circle header-profile-user" src="<?php echo $this->session->userdata('foto') ?>" alt="Header Avatar">
                 <?php else : ?>
-                  <img class="rounded-circle header-profile-user" src="<?php echo base_url('assets/clouds/drives/avatars/' . $this->session->userdata('foto')) ?>" alt="Header Avatar">
+                  <img class="rounded-circle header-profile-user" src="<?php echo base_url('public/assets/clouds/drives/avatars/' . $this->session->userdata('foto')) ?>" alt="Header Avatar">
                 <?php endif; ?>
               <?php else : ?>
-                <img class="rounded-circle header-profile-user bg-white p-1" src="<?php echo base_url('assets/clouds/drives/avatars/avatar.png') ?>" alt="Header Avatar">
+                <img class="rounded-circle header-profile-user bg-white p-1" src="<?php echo base_url('public/assets/clouds/drives/avatars/avatar.png') ?>" alt="Header Avatar">
               <?php endif; ?>
 
               <span class="text-start ms-xl-2">

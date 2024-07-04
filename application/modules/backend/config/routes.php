@@ -1,7 +1,6 @@
 <?php 
 
 $backend = 'backend';
-
 // backend
 $route['eo/menu-admin']         = $backend . '/menu_admin';
 $route['eo/menu-admin/list']    = $backend . '/menu_admin/list';

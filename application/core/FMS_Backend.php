@@ -59,7 +59,6 @@ class FMS_Backend extends FMS_Controller
 				$row['icon'] = $menu->icon;
 				$row['id_parent'] = $menu->id_parent;
 				$row['nodes'] = NULL;
-
 				$data[] = $row;
 			}
 			foreach ($data as $key => &$value) {
