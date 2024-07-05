@@ -11,7 +11,7 @@ class FMS_Frontend extends FMS_Controller {
 		$this->refresh_cache();
 		
 		// check for session
-		if (!$this->session->userdata('is_login')) redirect('auth');
+		// if (!$this->session->userdata('is_login')) redirect('auth');
 		
 		$this->url = $this->uri->segment(2);
 		$this->id_user_group = $this->session->userdata('id_user_group');

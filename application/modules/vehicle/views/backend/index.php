@@ -54,44 +54,27 @@
             <div class="modal-content">
                 <?php echo form_open_multipart('', 'id="form_add"') ?>
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modal_form_label">Form Tambah Data</h5>
+                    <h5 class="modal-title" id="modal_form_label">Form Tambah Data Kendaraan</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <div class="modal-body">
                     <input type="hidden" name="id">
                     <div class="form-group row mb-2">
-                        <label class="form-label bold col-md-4">Nama Lengkap <span class="text-danger">*)</span></label>
+                        <label class="form-label bold col-md-4">Plat Kendaraan<span
+                                class="text-danger">*)</span></label>
                         <div class="col-md-8">
                             <input type="text" name="name" class="form-control validate" placeholder="Nama Lengkap ...">
                         </div>
                     </div>
-                    <!-- <div class="form-group row mb-2 form_username">
-                    <label class="form-label bold col-md-4">Username <span class="text-danger">*)</span></label>
-                    <div class="col-md-8">
-                        <input type="text" name="username" class="form-control validate" placeholder="Username ...">
-                    </div>
-                </div> -->
-                    <div class="form-group row mb-2 form_password">
-                        <label class="form-label bold col-md-4">Password Default</label>
-                        <div class="col-md-3">
-                            <input type="text" class="form-control" value="1 2 3 4 5" disabled>
-                        </div>
-                    </div>
                     <div class="form-group row mb-2">
-                        <label class="form-label bold col-md-4">User Group / Level <span
-                                class="text-danger">*)</span></label>
+                        <label class="form-label bold col-md-4">Nama Kendaraan</label>
                         <div class="col-md-8">
-                            <select name="id_user_group" class="form-select validate">
-                                <option value="">Pilih ...</option>
-                                <?php foreach ($users_group as $row) : ?>
-                                <option value="<?php echo $row->id ?>"><?php echo $row->name ?></option>
-                                <?php endforeach; ?>
-                            </select>
+                            <input type="text" class="form-control" placeholder="Nama Kendaraan">
                         </div>
                     </div>
                     <div class="form-group row foto">
-                        <label class="form-label bold col-md-4">Foto / Avatar</label>
+                        <label class="form-label bold col-md-4">Foto Kendaraan</label>
                         <div class="col-md-8">
                             <input type="hidden" name="file_avatar_old">
                             <input type="file" name="file_avatar" class="form-control" accept=".png, .jpeg, .jpg">
@@ -126,8 +109,8 @@
     </div>
 
     <script>
-    var max_file_size = 5 * 1024 * 1024; // 5Mb
-    var methodName = 'eo/users';
+    var max_file_size = 5 * 1024 * 1024 * 1024 * 1024; // 7Mb
+    var methodName = 'eo/vehicle';
 
     $(function() {
         getListData(1)
@@ -139,7 +122,7 @@
         $('#btn_add').click(function() {
             resetForm()
             $('#modal_form').modal('show')
-            $('#modal_form_label').text('Form Tambah Data')
+            $('#modal_form_label').modal('show')
         })
 
         $('#btn_reload').click(function() {

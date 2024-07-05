@@ -69,7 +69,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link menu-link <?php echo $page === 'kendaraan' ? 'active' : '' ?>"
-                        href="<?php echo site_url('logistik/kendaraan') ?>">
+                        href="<?php echo site_url('eo/kendaraan') ?>">
                         <i class="mdi mdi-truck-fast"></i>
                         <span>Data Kendaraan</span>
                     </a>

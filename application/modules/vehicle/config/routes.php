@@ -1,3 +1,3 @@
 <?php
 
-$route['logistik/kendaraan'] = 'vehicle/backend/vehicle';
+$route['eo/kendaraan'] = 'vehicle/backend/vehicle';

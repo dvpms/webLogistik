@@ -72,7 +72,7 @@ class Vehicle extends FMS_Backend
 
 		$filename = 'avatar-'.date('Ymd').'-'.time();
 		if (!empty($_FILES['file_avatar']['name'])) {
-			$data
+			
 		}
 	}
 
