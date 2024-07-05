@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="<?php echo base_url('public/assets/backend/themes/css/bootstrap.min.css'); ?>" rel="stylesheet"
-        type="text/css">
     <link href="<?php echo base_url('public/assets/frontend/css/style.css'); ?>" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url('public/assets/frontend/css/service-p.css'); ?>" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url('public/assets/frontend/css/service-details-p.css'); ?>" rel="stylesheet" type="text/css">
 </head>
 
 <body>
