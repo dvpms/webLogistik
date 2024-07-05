@@ -1,4 +1,4 @@
 <?php
-$frontend = 'frondend';
+$frontend = 'frontend';
 // frontend
 $route['index/services']	= $frontend . '/services';

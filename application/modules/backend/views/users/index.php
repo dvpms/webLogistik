@@ -14,6 +14,7 @@
             </div>
         </div>
     </div>
+
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
@@ -51,7 +52,6 @@
     <div class="modal-dialog" style="max-width:600px">
         <div class="modal-content">
             <?php echo form_open_multipart('', 'id="form_add"') ?>
-
             <div class="modal-header">
                 <h5 class="modal-title" id="modal_form_label">Form Tambah Data</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -192,6 +192,7 @@ $(function() {
                     },
                     success: function(data) {
                         $('[name="' + csrfName + '"]').val(data._token);
+
                         if (data.validasi == false) {
                             // syamValidationServer('[name="username"]', 'username',
                             //     data)
