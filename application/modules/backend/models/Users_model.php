@@ -24,12 +24,12 @@ class Users_model extends CI_Model
 		$limitation = "";
 		if ($limit !== 0) {
 			$limitation = " LIMIT " . $start . " , " . $limit;
-		}
+	}
 		$sql = "SELECT a.*,
-				b.name as user_group 
-				FROM " . $this->table . " a 
+				b.name as user_group
+				FROM " . $this->table . " a
 				JOIN c_users_group as b ON (b.id = a.id_user_group)
-				WHERE a.id IS NOT NULL 
+				WHERE a.id IS NOT NULL
 				$where_param";
 		$order = " ORDER BY a.nama_pegawai ASC";
 		$result["data"] = $this->db->query($sql . $order . $limitation)->result();

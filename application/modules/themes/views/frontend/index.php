@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link href="<?php echo base_url('public/assets/frontend/css/style.css'); ?>" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="<?php echo base_url('public/assets/frontend/css/style.css'); ?>" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-	<header>
-			<nav>
-				<div class="logo">Logo</div>
-				<ul>
-					<li><a href="<?php echo base_url('home'); ?>">Home</a></li>
-					<li><a href="<?php echo base_url('home'); ?>">About</a></li>
-					<li><a href="<?php echo base_url('service'); ?>">Services</a></li>
-					<li><a href="<?php echo base_url('pricing'); ?>">Pricing</a></li>
-					<li><a href="<?php echo base_url('history'); ?>">History</a></li>
-				</ul>
-				<button class="login-btn">Login</button>
-			</nav>
-	</header>
+    <header>
+        <nav>
+            <div class="logo">Logo</div>
+            <ul>
+                <li><a href="<?php echo base_url('home'); ?>">Home</a></li>
+                <li><a href="<?php echo base_url('home'); ?>">About</a></li>
+                <li><a href="<?php echo base_url('service'); ?>">Services</a></li>
+                <li><a href="<?php echo base_url('pricing'); ?>">Pricing</a></li>
+                <li><a href="<?php echo base_url('history'); ?>">History</a></li>
+            </ul>
+            <button class="login-btn">Login</button>
+        </nav>
+    </header>
+    <div class="main-content">
+        <div class="page_content">
+            <div class="bg-overlay-content">
+                <div class="container-fluid">
+                    <?php
+						try {
+							$this->load->view($content);
+						} catch (\Exception $error) {
+							echo "<pre><code>" .$error . "</code></pre>";
+						}
+					?>
+                </div>
+            </div>
+        </div>
 
+    </div>
 
-	<footer>
-		<p>&copy; 2024 webLogistik</p>
-	</footer>
+    <footer>
+        <p>&copy; 2024 webLogistik</p>
+    </footer>
 </body>
+
 </html>
