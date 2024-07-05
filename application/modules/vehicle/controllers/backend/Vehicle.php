@@ -72,7 +72,22 @@ class Vehicle extends FMS_Backend
 
 		$filename = 'avatar-'.date('Ymd').'-'.time();
 		if (!empty($_FILES['file_avatar']['name'])) {
-			
+			$data_upload = $this->do_upload($filename, 'avatars', 'file_avatar', 60, 200, 200);
+			if ($data_upload['status'] !== false) {
+				$data['foto_pegawai'] = $data_upload['data']['file_name'];
+				if (secure_post('id') !== '') {
+					if (secure_post('file_avatar_old') !== '') {
+						$this->unlink_file('avatars/'.secure_post('file_avatar_old'));
+					}
+				}
+			} else {
+				$data['foto_pegawai'] = NULL;
+			}
+		}
+
+		if(secure_post('id') === ''){
+			$this->db->trans_begin();
+
 		}
 	}
 
