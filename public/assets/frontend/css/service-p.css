@@ -79,11 +79,17 @@ main {
 .service-card .content {
     flex-grow: 1;
     text-align: left;
+	background-color: black;
 }
 
 .service-card h2 {
     font-size: 18px;
     margin-bottom: 10px;
+}
+
+.content a{
+	text-decoration: none;
+	color: black;
 }
 
 .service-card p {
