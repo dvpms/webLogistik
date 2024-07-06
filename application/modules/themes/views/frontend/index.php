@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="<?php echo base_url('public/assets/frontend/css/style.css'); ?>" rel="stylesheet" type="text/css">
-	<link href="<?php echo base_url('public/assets/frontend/css/service-p.css'); ?>" rel="stylesheet" type="text/css">
-	<link href="<?php echo base_url('public/assets/frontend/css/service-details-p.css'); ?>" rel="stylesheet" type="text/css">
+    <title>webLogistik</title>
+	<link href="<?php echo base_url('public/assets/frontend/css/service-details-p.css'); ?>" rel="stylesheet">
+	<link href="<?php echo base_url('public/assets/frontend/css/service-p.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/assets/frontend/css/style.css'); ?>" rel="stylesheet">
 </head>
 
 <body>
@@ -15,33 +15,24 @@
         <nav>
             <div class="logo">Logo</div>
             <ul>
-                <li><a href="<?php echo base_url('home'); ?>">Home</a></li>
-                <li><a href="<?php echo base_url('home'); ?>">About</a></li>
-                <li><a href="<?php echo base_url('service'); ?>">Services</a></li>
-                <li><a href="<?php echo base_url('pricing'); ?>">Pricing</a></li>
-                <li><a href="<?php echo base_url('history'); ?>">History</a></li>
+                <li><a href="<?php echo base_url('/index/home'); ?>">Home</a></li>
+                <li><a href="<?php echo base_url('/index/about'); ?>">About</a></li>
+                <li><a href="<?php echo base_url('/index/services'); ?>">Services</a></li>
+                <li><a href="<?php echo base_url('/index/pricing'); ?>">Pricing</a></li>
+                <li><a href="<?php echo base_url('/index/history'); ?>">History</a></li>
             </ul>
             <button class="login-btn">Login</button>
         </nav>
     </header>
-    <div class="main-content">
-        <div class="page_content">
-            <div class="bg-overlay-content">
-                <div class="container-fluid">
-                    <?php
-						try {
-							$this->load->view($content);
-						} catch (\Exception $error) {
-							echo "<pre><code>" .$error . "</code></pre>";
-						}
-					?>
-                </div>
-            </div>
-        </div>
 
-    </div>
-
-    <footer>
+	<?php
+		try {
+			$this->load->view($content);
+		} catch (\Exception $error) {
+			echo "<pre><code>" .$error . "</code></pre>";
+		}
+	?>
+	<footer>
         <p>&copy; 2024 webLogistik</p>
     </footer>
 </body>

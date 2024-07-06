@@ -79,7 +79,6 @@ main {
 .service-card .content {
     flex-grow: 1;
     text-align: left;
-	background-color: black;
 }
 
 .service-card h2 {
@@ -87,7 +86,7 @@ main {
     margin-bottom: 10px;
 }
 
-.content a{
+.service-card .content a{
 	text-decoration: none;
 	color: black;
 }
