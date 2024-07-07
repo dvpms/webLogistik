@@ -11,11 +11,11 @@
 	</div>
 	<div class="hero-images">
 		<div class="main-image-container">
-			<img src="/frond-end//images/delivery-man.png" alt="Delivery Man" class="main-image">
+			<img src="public/assets/frontend/images/delivery-man.png" alt="Delivery Man" class="main-image">
 		</div>
 		<div class="secondary-images">
-			<img src="/frond-end//images/delivery-woman.png" alt="Delivery Woman" class="secondary-image">
-			<img src="/frond-end//images/package-handover.png" alt="Package Handover" class="secondary-image">
+			<img src="public/assets/frontend/images/delivery-woman.png" alt="Delivery Woman" class="secondary-image">
+			<img src="public/assets/frontend/images/package-handover.png" alt="Package Handover" class="secondary-image">
 		</div>
 	</div>
  </section>
