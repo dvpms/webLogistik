@@ -443,7 +443,7 @@ function loadData(page) {
     $.ajax({
         url: baseUrl + methodName + '/list',
         type: 'GET',
-        data: 'page=' + page + '&keyword=' + 'an',
+        data: 'page=' + page + '&keyword=' + 'gilang',
         cache: false,
         dataType: 'JSON',
         beforeSend: function() {

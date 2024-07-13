@@ -21,11 +21,11 @@
                     <table id="table_list" class="table table-striped table-hover table-sm">
                         <thead>
                             <tr>
-                                <th class="center" width="5%">No.</th>
-                                <th class="center" width="5%">Avatar</th>
-                                <th width="10%">Username</th>
-                                <th width="35%">Nama Lengkap</th>
-                                <th width="25%">Akses Group</th>
+                                <th class="center" width="5%">ID</th>
+                                <th class="center" width="5%">Foto Kendaraan</th>
+                                <th width="10%">Plat Kendaraan</th>
+                                <th width="35%">Nama Kendaraan</th>
+                                <th width="25%">Group</th>
                                 <th width="5%">Status</th>
                                 <th widht="5%"></th>
                             </tr>
@@ -52,29 +52,29 @@
         <div class="modal-content">
             <?php echo form_open_multipart('', 'id="form_add"') ?>
             <div class="modal-header">
-                <h5 class="modal-title" id="modal_form_label">Form Tambah Data</h5>
+                <h5 class="modal-title" id="modal_form_label">Form Tambah Data Kendaraan</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <input type="hidden" name="id">
                 <div class="form-group row mb-2">
-                    <label class="form-label bold col-md-4">Nama Lengkap <span class="text-danger">*)</span></label>
+                    <label class="form-label bold col-md-4">Nama Kendaraan <span class="text-danger">*)</span></label>
                     <div class="col-md-8">
-                        <input type="text" name="name" class="form-control validate" placeholder="Nama Lengkap ...">
+                        <input type="text" name="name" class="form-control validate">
                     </div>
                 </div>
                 <div class="form-group row mb-2 form_username">
-                    <label class="form-label bold col-md-4">Username <span class="text-danger">*)</span></label>
+                    <label class="form-label bold col-md-4">Plat Kendaraan<span class="text-danger">*)</span></label>
                     <div class="col-md-8">
-                        <input type="text" name="username" class="form-control validate" placeholder="Username ...">
+                        <input type="text" name="username" class="form-control validate">
                     </div>
                 </div>
-                <div class="form-group row mb-2 form_password">
+                <!-- <div class="form-group row mb-2 form_password">
                     <label class="form-label bold col-md-4">Password Default</label>
                     <div class="col-md-3">
                         <input type="text" class="form-control" value="1 2 3 4 5" disabled>
                     </div>
-                </div>
+                </div> -->
                 <div class="form-group row mb-2">
                     <label class="form-label bold col-md-4">User Group / Level <span
                             class="text-danger">*)</span></label>
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="form-group row foto">
-                    <label class="form-label bold col-md-4">Foto / Avatar</label>
+                    <label class="form-label bold col-md-4">Foto Kendaraan</label>
                     <div class="col-md-8">
                         <input type="hidden" name="file_avatar_old">
                         <input type="file" name="file_avatar" class="form-control" accept=".png, .jpeg, .jpg">
@@ -440,10 +440,11 @@ function deleteData(id, file_avatar, page) {
 }
 
 function loadData(page) {
+    var merkKendaraan = "12"
     $.ajax({
         url: baseUrl + methodName + '/list',
         type: 'GET',
-        data: 'page=' + page + '&keyword=' + 'an',
+        data: 'page=' + page + '&keyword=' + merkKendaraan,
         cache: false,
         dataType: 'JSON',
         beforeSend: function() {
