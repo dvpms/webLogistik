@@ -12,6 +12,7 @@
     <link href="<?php echo base_url('public/assets/frontend/css/service-details-p.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('public/assets/frontend/css/service-p.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('public/assets/frontend/css/style.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/assets/frontend/css/home-page.css'); ?>" rel="stylesheet">
 </head>
 
 <body>
