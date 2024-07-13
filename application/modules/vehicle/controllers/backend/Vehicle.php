@@ -43,10 +43,10 @@ class Vehicle extends FMS_Backend
 	}
 
 	private function _validation(){
-		$this->form_validation->set_rules('name','Nama Kendaraan','required|trim');
+		$this->form_validation->set_rules('name','Nama Kendaraan');
 		
 		if(secure_post('id') === '') {
-			$this-> form_validation->set_rules('plat_kendaraan','Plat Kendaraan','required|trim|is_unique[c_vehicle.plat_kendaraan');
+			$this-> form_validation->set_rules('plat_kendaraan','Plat Kendaraan','[c_vehicle.plat_kendaraan');
 		}
 
 		if($this->form_validation->run()) return true;
@@ -69,12 +69,7 @@ class Vehicle extends FMS_Backend
 		}
 	}
 
-	function store() {
-		$this->_validation();
-		$data = [
-			'plat_kendaraan' => secure_post('plat_kendaraan'),
-			'nama_kendaraan' => secure_post('name'),
-		];
+	
 
 		// $filename = 'avatar-'.date('Ymd').'-'.time();
 		// if (!empty($_FILES['file_avatar']['name'])) {
@@ -91,29 +86,36 @@ class Vehicle extends FMS_Backend
 		// 	}
 		// }
 
-		if(secure_post('id') === ''){
-			$this->db->trans_begin();
-			$data['plat_kendaraan'] = secure_post('plat_kendaraan');
-			$this->builder_model->store($this->table, $data);
-
-			if ($this->db->trans_status() === false) {
-				$this->db->trans_rollback();
-				$this->send_error($data_upload['message']);
-			}else{
-				$this->db->trans_commit();
-				$this->send_success('Berhasil menyimpan data.');
-			}
-		}else{
-			$this->builder_model->store($this->table, $data, ['id' => secure_post('id')]);
-			if ($this->db->trans_status() === false) {
-				$this->db->trans_rollback();
-				$this->send_error($data_upload['message']);
+		function store() {
+			$this->_validation();
+			$data = [
+				'plat_kendaraan' => $this->input->post('plat_kendaraan', true),
+				'nama_kendaraan' => $this->input->post('nama_kendaraan', true),
+			];
+		
+			if (secure_post('id') === '') {
+				$this->db->trans_begin();
+				$data['plat_kendaraan'] = secure_post('plat_kendaraan');
+				$this->builder_model->store($this->table, $data);
+		
+				if ($this->db->trans_status() === FALSE) {
+					$this->db->trans_rollback();
+					show_error('Error saving data', 404);
+				} else {
+					$this->db->trans_commit();
+					redirect('success_url', 'efresh');
+				}
 			} else {
-				$this->db->trans_commit();
-				$this->send_success('Berhasil mengubah data.');
+				$this->builder_model->store($this->table, $data, ['id' => secure_post('id')]);
+				if ($this->db->trans_status() === FALSE) {
+					$this->db->trans_rollback();
+					show_error('Error updating data', 404);
+				} else {
+					$this->db->trans_commit();
+					redirect('success_url', 'efresh');
+				}
 			}
 		}
-	}
 
 	function destroy($id)
 	{
