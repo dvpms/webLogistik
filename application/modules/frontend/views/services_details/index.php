@@ -28,7 +28,7 @@
 		</div>
 		<div class="contact-info">
 			<h2>Have a Question?</h2>
-			<img src="images/phone.png" alt="">
+			<img src="<?php echo base_url('public/assets/frontend/images/phone.png'); ?>" alt="">
 			<span>+1 9876352081</span>
 		</div>
 		<div class="opportunity">
