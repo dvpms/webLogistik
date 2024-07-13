@@ -6,19 +6,19 @@
                 <hr>
                 <ul>
                     <li>
-                        <img src="<?php echo base_url('emojione-monotone--right-arrow.png')?>" alt="" style="vertical-align: middle;">
+                        <img src="<?php echo base_url('public/assets/frontend/images/Logistics.png')?>" alt="" style="vertical-align: middle;">
                         Pengiriman Dalam Kota (Instant)
                     </li>
                     <li>
-                        <img src="<?php echo base_url('images/emojione-monotone--right-arrow.png')?>" alt="" style="vertical-align: middle;">
+                        <img src="<?php echo base_url('public/assets/frontend/images/Logistics.png')?>" alt="" style="vertical-align: middle;">
                         Pengiriman Dalam Kota (Reguler)
                     </li>
                     <li>
-                        <img src="<?php echo base_url('images/emojione-monotone--right-arrow.png')?>" alt="" style="vertical-align: middle;">
+                        <img src="<?php echo base_url('public/assets/frontend/images/Logistics.png')?>" alt="" style="vertical-align: middle;">
                         Pengiriman Luar Kota (Instant)
                     </li>
                     <li>
-                        <img src="<?php echo base_url('images/emojione-monotone--right-arrow.png')?>" alt="" style="vertical-align: middle;">
+                        <img src="<?php echo base_url('public/assets/frontend/images/Logistics.png')?>" alt="" style="vertical-align: middle;">
                         Pengiriman Luar Kota (Reguler)
                     </li>
                 </ul>
@@ -35,14 +35,14 @@
                 <h2>Opportunity</h2>
                 <ul>
                     <li>
-                        <img src="<?php echo base_url('public/assets/frontend/images/emojione-monotone--right-arrow.png')?>" alt="" style="vertical-align: middle;">
+                        <img src="<?php echo base_url('public/assets/frontend/images/Logistics.png')?>" alt="" style="vertical-align: middle;">
                         Fast delivery</li>
                     <li>
-                        <img src="<?php echo base_url('public/assets/frontend/images/emojione-monotone--right-arrow.png')?>" alt="" style="vertical-align: middle;">
+                        <img src="<?php echo base_url('public/assets/frontend/images/Logistics.png')?>" alt="" style="vertical-align: middle;">
                         Right on time
                     </li>
                     <li>
-                        <img src="<?php echo base_url('public/assets/frontend/images/emojione-monotone--right-arrow.png')?>" alt="" style="vertical-align: middle;">
+                        <img src="<?php echo base_url('public/assets/frontend/images/Logistics.png')?>" alt="" style="vertical-align: middle;">
                         No frills, no extra charges</li>
                 </ul>
             </div>
