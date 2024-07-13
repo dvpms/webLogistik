@@ -6,8 +6,7 @@
             <hr>
             <ul>
                 <li>
-                    <img src="images/emojione-monotone--right-arrow.png <?php site_url('index/services/details') ?>"
-                        alt="" style="vertical-align: middle;">
+                    <img src="images/emojione-monotone--right-arrow.png" alt="" style="vertical-align: middle;">
                     Pengiriman Dalam Kota (Instant)
                 </li>
                 <li>
