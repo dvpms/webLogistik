@@ -5,7 +5,7 @@
         <div class="service-card">
             <div class="icon"><img src="images/truck.svg" alt=""> </div>
             <div class="content">
-                <a href="service-details-p.html">
+                <a href="<?php echo site_url('index/services/details')?>">
                     <h2>Pengiriman Dalam Kota (Reguler)</h2>
                     <p>Pengiriman yang dapat dilatur untuk kota tertentu yang disesuaikan oleh lokasi anda dan dapat
                         dilaksanakan dengan tepat</p>
