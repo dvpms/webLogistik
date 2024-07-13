@@ -74,9 +74,9 @@ class Users extends FMS_Backend {
 		$this->form_validation->set_rules('name', 'Nama lengkap', 'required|trim');
 		$this->form_validation->set_rules('id_user_group', 'User group', 'required|trim');
 
-		// if (secure_post('id') === '') {
-		// 	$this->form_validation->set_rules('username', 'Username', 'required|trim|is_exist[c_users.nip]');
-		// }
+		if (secure_post('id') === '') {
+			$this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[c_users.nip]');
+		}
 
 		if ($this->form_validation->run()) return true;
 		
@@ -85,7 +85,7 @@ class Users extends FMS_Backend {
 		$data['status'] = true;
 		$data['_token'] = $this->security->get_csrf_hash();
 
-		// if (form_error('username')) $error[] = 'username';
+		if (form_error('username')) $error[] = 'username';
 		if (form_error('name')) $error[] = 'name';
 		if (form_error('id_user_group')) $error[] = 'id_user_group';
 
@@ -105,7 +105,7 @@ class Users extends FMS_Backend {
 		$data = [
 			'id_user_group' => secure_post('id_user_group'),
 			'nama_pegawai' => secure_post('name'),
-			// 'nip' => secure_post('username'),
+			'nip' => secure_post('username'),
 		];
 
 		$filename = 'avatar-'.date('Ymd').'-'.time();
@@ -124,7 +124,7 @@ class Users extends FMS_Backend {
 		}
 		if (secure_post('id') === '') {
 			$this->db->trans_begin();
-			// $data['nip'] = secure_post('username');
+			$data['nip'] = secure_post('username');
 			$data['password'] = password_hash('12345', PASSWORD_DEFAULT);
 			$data['is_pegawai'] = 0;
 			$this->builder_model->store($this->table, $data);

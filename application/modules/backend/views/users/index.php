@@ -14,7 +14,6 @@
             </div>
         </div>
     </div>
-
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
@@ -35,14 +34,14 @@
                     </table>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <input type="hidden" id="page_list">
-            <div class="col-sm-12 col-md-5">
-                <div id="summary"></div>
-            </div>
-            <div class="col-sm-12 col-md-7">
-                <div id="pagination"></div>
+            <div class="row">
+                <input type="hidden" id="page_list">
+                <div class="col-sm-12 col-md-5">
+                    <div id="summary"></div>
+                </div>
+                <div class="col-sm-12 col-md-7">
+                    <div id="pagination"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -56,7 +55,6 @@
                 <h5 class="modal-title" id="modal_form_label">Form Tambah Data</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-
             <div class="modal-body">
                 <input type="hidden" name="id">
                 <div class="form-group row mb-2">
@@ -65,12 +63,12 @@
                         <input type="text" name="name" class="form-control validate" placeholder="Nama Lengkap ...">
                     </div>
                 </div>
-                <!-- <div class="form-group row mb-2 form_username">
+                <div class="form-group row mb-2 form_username">
                     <label class="form-label bold col-md-4">Username <span class="text-danger">*)</span></label>
                     <div class="col-md-8">
                         <input type="text" name="username" class="form-control validate" placeholder="Username ...">
                     </div>
-                </div> -->
+                </div>
                 <div class="form-group row mb-2 form_password">
                     <label class="form-label bold col-md-4">Password Default</label>
                     <div class="col-md-3">
@@ -112,7 +110,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal"><i
                         class="bx bx-x-circle"></i> Batal</button>
@@ -127,8 +124,8 @@
 var max_file_size = 5 * 1024 * 1024; // 5Mb
 var methodName = 'eo/users';
 
-$(function() {
-    getListData(1)
+$(document).ready(function() {
+    loadData(1);
 
     $('#keyword_search').keyup(function() {
         getListData(1)
@@ -192,10 +189,9 @@ $(function() {
                     },
                     success: function(data) {
                         $('[name="' + csrfName + '"]').val(data._token);
-
                         if (data.validasi == false) {
-                            // syamValidationServer('[name="username"]', 'username',
-                            //     data)
+                            syamValidationServer('[name="username"]', 'username',
+                                data)
                             syamValidationServer('[name="name"]', 'name', data)
                             syamValidationServer('[name="email"]', 'email', data)
                             syamValidationServer('[name="id_user_group"]',
@@ -237,6 +233,7 @@ $(function() {
 })
 
 function getListData(page) {
+    console.log('Fetching data for page: ', page);
     $.ajax({
         type: 'GET',
         url: baseUrl + methodName + '/list',
@@ -248,10 +245,13 @@ function getListData(page) {
             $('#page_list').val(page)
         },
         success: function(data) {
+            console.log('Data received:', data);
             if ((page > 1) && (data.data.length == 0)) {
                 getListData(page - 1)
                 return false
             }
+
+            console.log('Data to render:', data.data);
 
             $('#pagination').html(paginationJump(data.jumlah, data.limit, data.page, 1))
             $('#summary').html(pageSummary(data.jumlah, data.data.length, data.limit, data.page))
@@ -265,7 +265,7 @@ function getListData(page) {
 								</div>`;
 
                 var foto =
-                    `<img src="<?php echo base_url('assets/clouds/drives/avatars/avatar.png') ?>" class="rounded-circle shadow bg-white p-1" width="34" height="34">`;
+                    `<img src="<?php echo base_url('public/assets/clouds/drives/avatars/avatar.png') ?>" class="rounded-circle shadow bg-white p-1" width="34" height="34">`;
                 if (v.foto_pegawai !== null) {
                     if (v.is_pegawai == 1) {
                         foto = `<a data-fancybox data-src="${v.foto_pegawai}" data-caption="${v.nama_pegawai}">
@@ -317,7 +317,7 @@ function resetForm() {
     $('[name="name"]').prop('readonly', false)
     $('.form-control').prop('readonly', false)
     syamValidationRemove('.validate')
-    $('#image_preview').attr('src', '<?php echo base_url('assets/clouds/drives/avatars/avatar.png') ?>')
+    $('#image_preview').attr('src', '<?php echo base_url('public/assets/clouds/drives/avatars/avatar.png') ?>')
 }
 
 function updateStatus(id, status) {
@@ -375,7 +375,7 @@ function editData(id, page) {
                     $('[name="file_avatar_old"]').val(data.foto_pegawai)
                     if (data.foto_pegawai !== null) {
                         $('#image_preview').attr('src',
-                            '<?php echo base_url('assets/clouds/drives/avatars/') ?>' + data
+                            '<?php echo base_url('public/assets/clouds/drives/avatars/') ?>' + data
                             .foto_pegawai)
                     }
                 }
@@ -437,5 +437,77 @@ function deleteData(id, file_avatar, page) {
             })
         }
     })
+}
+
+function loadData(page) {
+    $.ajax({
+        url: baseUrl + methodName + '/list',
+        type: 'GET',
+        data: 'page=' + page + '&keyword=' + 'an',
+        cache: false,
+        dataType: 'JSON',
+        beforeSend: function() {
+            showLoader()
+            $('#page_list').val(page)
+        },
+        success: function(data) {
+            console.log('Data received:', data);
+            if ((page > 1) && (data.data.length == 0)) {
+                getListData(page - 1)
+                return false
+            }
+
+            console.log('Data to render:', data.data);
+            $('#pagination').html(paginationJump(data.jumlah, data.limit, data.page, 1))
+            $('#summary').html(pageSummary(data.jumlah, data.data.length, data.limit, data.page))
+
+            $('#table_list tbody').empty()
+            $.each(data.data, function(i, v) {
+                var no = ((i + 1) + ((data.page - 1) * data.limit))
+                var status = `<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" onclick="updateStatus(${v.id}, '${v.is_active}')" ${(v.is_active == 1 ? 'checked' : '')}>
+									<label class="form-check-label">${(v.is_active == 1 ? '<span class="badge bg-success">Active</span>' : '<span class="badge bg-danger">Unactive</span>')}</label>
+								</div>`;
+
+                var foto =
+                    `<img src="<?php echo base_url('assets/clouds/drives/avatars/avatar.png') ?>" class="rounded-circle shadow bg-white p-1" width="34" height="34">`;
+                if (v.foto_pegawai !== null) {
+                    if (v.is_pegawai == 1) {
+                        foto = `<a data-fancybox data-src="${v.foto_pegawai}" data-caption="${v.nama_pegawai}">
+										<img src="${v.foto_pegawai}" class="rounded-circle shadow" width="34" height="34">
+									</a>`;
+                    } else {
+                        foto = `<a data-fancybox data-src="<?php echo base_url('public/assets/clouds/drives/avatars/') ?>${v.foto_pegawai}" data-caption="${v.nama_pegawai}">
+										<img src="<?php echo base_url('public/assets/clouds/drives/avatars/') ?>${v.foto_pegawai}" class="rounded-circle shadow" width="34" height="34">
+									</a>`;
+                    }
+                }
+
+                var html = '<tr>' +
+                    '<td class="center">' + no + '</td>' +
+                    '<td class="center">' + foto + '</td>' +
+                    '<td>' + v.nip + '</td>' +
+                    '<td>' + v.nama_pegawai + '</td>' +
+                    '<td>' + v.user_group + '</td>' +
+                    '<td class="nowrap">' + status + '</td>' +
+                    '<td class="right nowrap">' +
+                    '<button type="button" class="btn btn-success btn-sm" onclick="editData(' + v
+                    .id + ', ' + data.page + ')"><i class="bx bx-edit"></i></button> ' +
+                    '<button type="button" class="btn btn-danger btn-sm" onclick="deleteData(' + v
+                    .id + ', \'' + (v.foto_pegawai !== null ? v.foto_pegawai : '') + '\', ' + data
+                    .page + ')"><i class="bx bx-trash"></i></button>' +
+                    '</td>' +
+                    '</tr>';
+
+                $('#table_list tbody').append(html)
+            })
+        },
+        complete: function() {
+            hideLoader()
+        },
+        error: function(e) {
+            toastrAlert('error', e.status, e.statusText)
+        }
+    });
 }
 </script>

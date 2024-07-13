@@ -1,5 +1,5 @@
 <?php
 $frontend = 'frontend';
 // frontend
-$route['index/home']		= $frontend . '/home';
+$route['index/about']		= $frontend . '/about';
 $route['index/services']	= $frontend . '/services';

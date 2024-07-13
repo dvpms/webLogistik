@@ -13,8 +13,8 @@ function __construct()
 function get_list_data($start, $limit, $search) {
     $where_param = "";
     if ($search['keyword'] != '') {
-        $where_param .= " AND (nama_kendaraan LIKE '%" . $search['keyword'] . "%'";
-        $where_param .= " OR plat_kendaraan LIKE '%" . $search['keyword'] . "%')";
+        $where_param .= " AND (a.nama_kendaraan LIKE '%" . $search['keyword'] . "%'";
+        $where_param .= " OR a.plat_kendaraan LIKE '%" . $search['keyword'] . "%')";
     }
 
     $limitation = "";
@@ -31,8 +31,6 @@ function get_list_data($start, $limit, $search) {
     $result["data"] = $this->db->query($sql . $order . $limitation)->result();
     $result["jumlah"] = $this->db->query($sql)->num_rows();
     $this->db->close();
-
     return $result;
-    
     }
 }

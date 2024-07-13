@@ -491,9 +491,13 @@ function secure_get($param)
 {
   $CI = &get_instance();
   $string = $CI->input->get($param, true);
-  $quote = str_replace("'", "`", $string);
-  $result = str_replace(array("?", "\\"), "", $quote);
-  return $result;
+
+  if (!is_null($string)) {
+    $quote = str_replace("'", "`", $string);
+    $result = str_replace(array("?", "\\"), "", $quote);
+    return $result;
+  }
+  return '';
 }
 
 function secure_post($param)

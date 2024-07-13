@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php $page_title; ?></title>
-	<link href="<?php echo base_url('public/assets/frontend/css/service-details-p.css'); ?>" rel="stylesheet">
-	<link href="<?php echo base_url('public/assets/frontend/css/service-p.css'); ?>" rel="stylesheet">
+    <title><?php echo $page_title?></title>
+    <link href="<?php echo base_url('public/assets/frontend/css/service-details-p.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/assets/frontend/css/service-p.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('public/assets/frontend/css/style.css'); ?>" rel="stylesheet">
 </head>
 
@@ -25,14 +25,14 @@
         </nav>
     </header>
 
-	<?php
+    <?php
 		try {
 			$this->load->view($content);
 		} catch (\Exception $error) {
 			echo "<pre><code>" .$error . "</code></pre>";
 		}
 	?>
-	<footer>
+    <footer>
         <p>&copy; 2024 webLogistik</p>
     </footer>
 </body>

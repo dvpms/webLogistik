@@ -7,6 +7,6 @@ class Services extends FMS_Frontend{
 
     function index() {
         $data['page_title'] = 'Services';
-        $this->layout_frontend('index',$data);
+        $this->layout_frontend('services_page/index',$data);
     }
 }
