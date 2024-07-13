@@ -119,7 +119,7 @@
     </div>
 
     <script>
-    var methodName = 'eo/users';
+    var methodName = 'eo/kendaraan';
 
     $(document).ready(function() {
         loadData(1);
