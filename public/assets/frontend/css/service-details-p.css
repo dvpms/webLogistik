@@ -4,39 +4,64 @@
     box-sizing: border-box;
 }
 
-main {
-    padding: 50px;
-}
-
 h1 {
     margin-bottom: 30px;
 }
 
-.services-container {
-    background-color: white;
-    border-radius: 10px;
-    padding: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+hr {
+    width: 100%; /* Lebar garis 50% dari lebar halaman */
+    height: 2px; /* Tinggi garis 1 piksel */
+    background-color: black; /* Warna garis hitam */
+    margin: 5px auto; /* Margin 20 piksel atas dan bawah, auto untuk penempatan horizontal di tengah */
+    border: none; /* Tidak ada batas */
 }
 
-.services-list, .contact-info, .delivery-map, .opportunity {
+ .services-details h1{
+    margin: 20px 30px;
+    font-size: 30px;
+ }
+.services-container {
+    
+    background-color: rgb(194, 194, 194);
+    border-radius: 45px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.services-list{
+    height: fit-content;
+}
+
+.services-list, .contact-info {
     background-color: #f8f9fa;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px 45px;
+}
+
+
+.services-list li img, .opportunity li img{
+    width: 20px;
+    margin-right: 10px;
 }
 
 .services-list ul, .opportunity ul {
     list-style-type: none;
 }
 
-.services-list li, .opportunity li {
-    margin-bottom: 10px;
+.services-list li{
+    display: flex;
+    align-items: center;
+    background-color: rgb(187, 187, 187);
+    height: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-top: 20px;
 }
 
-.services-list li span {
-    margin-right: 10px;
+.services-list li, .opportunity li {
+    margin-bottom: 10px;
 }
 
 .services-list li.active {
@@ -52,18 +77,21 @@ h1 {
 
 .contact-info {
     background-color: #4a90e2;
-    color: white;
+    color: black;
+    font-size: 20px;
+    text-align: center;
 }
+
+.contact-info h2     img{
+    margin-top: 20px;
+}
+
+.contact-info img{
+    height: 60px;
+    margin-right: 10px;
+}
+
 
 .contact-info h2, .opportunity h2 {
     margin-bottom: 10px;
-}
-
-.opportunity ul li::before {
-    content: "•";
-    color: #4a90e2;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
 }
